@@ -18,4 +18,5 @@ while True:
                 conn.sendall(data)
             else:
                 conn.close()
+                print addr, "closed"
                 break
