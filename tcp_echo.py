@@ -10,7 +10,7 @@ sock.listen(1)
 while True:
     conn, addr = sock.accept()
     while True:
-        data = data.recv(1024)
+        data = conn.recv(1024)
         if 'close' not in data:
             conn.sendall(data)
         else:
