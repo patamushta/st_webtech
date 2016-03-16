@@ -13,6 +13,7 @@ while True:
     if not os.fork():
         while True:
             data = conn.recv(1024)
+            print addr, data
             if 'close' not in data:
                 conn.sendall(data)
             else:
